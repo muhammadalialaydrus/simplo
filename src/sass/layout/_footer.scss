@@ -1,0 +1,168 @@
+footer {
+	background-color: $blue;
+	color: $white;
+
+	.nav-top {
+		padding: 40px 0;
+		
+		// @include breakpoint(tablet) {
+		// 	padding: 60px 0;
+		// }
+
+		.footer-wrapper {
+			[class*="col-"] {
+				+ [class*="col-"] {
+					margin-top: 16px;
+
+					@include breakpoint(tablet) {
+						margin-top: 0;
+					}
+				}
+			}
+		}
+
+		.footer-logo {
+			display: flex;
+			justify-content: center;
+			
+			@include breakpoint(tablet) {
+				justify-content: start;
+			}
+
+			figure {
+				width: 120px;
+				
+				@include breakpoint(tablet) {
+					width: 170px;
+				}
+			}
+		}
+
+		.footer-sosmed {
+			ul {
+				padding: 0;
+				text-align: center;
+				
+				@include breakpoint(tablet) {
+					text-align: right;
+				}
+			}
+
+			li {
+				margin: 0;
+				vertical-align: middle;
+
+				+ li {
+					margin: 0 0 0 4px;
+				}
+
+				&.linkedin {
+					a {
+						&:hover {
+							background-color: $linkedin;
+						}
+					}
+				}
+
+				&.facebook {
+					a {
+						&:hover {
+							background-color: $facebook;
+						}
+					}
+				}
+
+				&.twitter {
+					a {
+						&:hover {
+							background-color: $twitter;
+						}
+					}
+				}
+
+				&.tiktok {
+					a {
+						&:hover {
+							background-color: $black;
+						}
+					}
+				}
+
+				&.youtube {
+					a {
+						&:hover {
+							background-color: $youtube;
+						}
+					}
+				}
+
+				&.instagram {
+					a {
+						&:hover {
+							background: rgb(115,36,193);
+							background: -moz-linear-gradient(212deg, rgba(115,36,193,1) 0%, rgba(196,49,98,1) 50%, rgba(222,148,62,1) 100%);
+							background: -webkit-linear-gradient(212deg, rgba(115,36,193,1) 0%, rgba(196,49,98,1) 50%, rgba(222,148,62,1) 100%);
+							background: linear-gradient(212deg, rgba(115,36,193,1) 0%, rgba(196,49,98,1) 50%, rgba(222,148,62,1) 100%);
+							filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7324c1",endColorstr="#de943e",GradientType=1);
+						}
+					}
+				}
+			}
+
+			a {
+				font-size: 1.3em;
+				line-height: 100%;
+				text-align: center;
+				color: $white;
+				display: block;
+				background-color: #00306f;
+				width: 36px;
+				height: 36px;
+				padding: 9px 0;
+				border-radius: 100%;
+				transition: all 0.3s linear;
+				
+				@include breakpoint(tablet) {
+					font-size: 1.5em;
+					width: 44px;
+					height: 44px;
+					padding: 11px 0;
+				}
+
+				&:hover {
+					color: $white;
+					background-color: $semi-yellow;
+				}
+			}
+
+			.icon-buttom {
+				display: block;
+				width: 18px;
+				height: 18px;
+				margin: 0 auto;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: contain;
+				
+				@include breakpoint(tablet) {
+					width: 20px;
+					height: 20px;
+				}
+
+				&.fa-tiktok {
+					background-image: url('../assets/img/icon-tiktok-white.png');
+				}
+			}
+		}
+	}
+
+	.nav-bottom {
+		text-align: center;
+		padding: 12px 0;
+		background-color: #00306f;
+
+		p {
+			font-size: 0.9rem;
+		}
+	}
+}

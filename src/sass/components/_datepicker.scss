@@ -1,0 +1,138 @@
+.datepicker-form {
+	cursor: pointer;
+}
+
+.datepicker {
+	.datepicker-switch {
+		&:hover {
+			background-color: transparent;
+		}
+	}
+
+	&.datepicker-dropdown {
+		background-color: $white;
+		border: 0;
+		padding: 0;
+		overflow: initial;
+		border-radius: 20px;
+		box-shadow: 0 1px 10px rgba(0,0,0,0.2);
+
+		table {
+			margin: 0 auto;
+			border-collapse: separate;
+			border-spacing: 10px;
+
+			tr {
+				th {
+					padding: 0;
+					height: 27px;
+					width: 27px;
+					border-radius: 100%;
+				}
+
+				td {
+					padding: 0;
+					height: 27px;
+					width: 27px;
+					border-radius: 100%;
+
+					span {
+						height: 50px;
+						line-height: 50px;
+						border-radius: 100%;
+
+						&.active {
+							background: $blue!important;
+							color: $white;
+							border: 0;
+							box-shadow: none;
+
+							&.active {
+								background: $blue!important;
+								color: $white;
+							}
+
+							&:hover {
+								&.active {
+									background: $blue!important;
+									color: $white;	
+								}
+							}
+						}
+					}
+
+					.decade {
+					}
+
+					&.today {
+						background: $blue!important;
+						color: $white;
+
+						&:hover {
+							&:hover {
+								background: $blue!important;
+								color: $white;	
+							}
+						}
+					}
+
+					&.active {
+						background: $green!important;
+						color: $white;
+						border: 0;
+						box-shadow: none;
+
+						&.active {
+							background: $green!important;
+							color: $white;
+						}
+
+						&:hover {
+							&.active {
+								background: $green!important;
+								color: $white;	
+							}
+						}
+					}
+				}
+			}
+
+			thead {
+				th {
+					i {
+						font-size: 1.1em;
+						line-height: 100%;
+						pointer-events: none;
+					}
+				}
+			}
+
+			tfoot {
+				display: none;
+			}
+		}
+
+		&.date-sort {
+			padding: 58px 20px 20px;
+		}
+
+		&.datepicker-orient-top {
+			&:before {
+				border-top-color: #f3f4f6;
+				border-bottom-color: transparent;
+			}
+		}
+
+		&.datepicker-orient-left {
+			&:before {
+				left: 26px;
+				border-top-color: transparent;
+				border-bottom-color: #f3f4f6;
+			}
+			
+			&:after {
+				left: 27px;
+			}
+		}
+	}
+}

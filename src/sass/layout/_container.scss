@@ -1,0 +1,83 @@
+:focus {
+	outline: 0;
+}
+
+html {
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+
+	&.no-scroll {
+		overflow: hidden;
+	}
+}
+
+body {
+	font-family: 'lato-regular';
+	color: $body-color;
+	background-color: $body-background;
+	background-position: center;
+	background-repeat: repeat-y;
+	background-size: contain;
+
+	&.no-scroll {
+		overflow: hidden;
+	}
+
+	&.index,
+	&.full-cover,
+	&.with-banner {
+		main {
+			padding-top: 0;
+		}
+	}
+}
+
+main {
+	// padding-top: 62px;
+	
+	// @include breakpoint(tablet) {
+	// 	padding-top: 64px;
+	// }
+
+	+ footer {
+		margin-top: 4rem;
+		
+		@include breakpoint(tablet) {
+			margin-top: 6rem;
+		}
+	}
+}
+
+.container {
+	padding: 0 16px;
+
+	@include breakpoint(tablet) {
+		padding: 0;
+	}
+}
+
+.container-fluid {
+	@include breakpoint(tablet) {
+		padding: 0 30px;
+	}
+
+	@include breakpoint(desktop) {
+		padding: 0 60px;
+	}
+
+	&.full-width {
+		padding: 0;
+	}
+}
+
+section {
+	overflow: hidden;
+	
+	+ section {
+		margin-top: 8rem;
+		
+		@include breakpoint(tablet) {
+			margin-top: 10rem;
+		}
+	}
+}

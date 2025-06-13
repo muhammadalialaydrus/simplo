@@ -1,0 +1,122 @@
+ .about {
+	padding: 2rem 0 4rem;
+
+	.image-area {
+		img {
+			width: 100%;
+		}
+
+		+ .article-area {
+			margin-top: 2rem;
+		}
+	}
+
+	.title-detail {
+		h6 {
+			font-size: 0.9rem;
+			text-transform: uppercase;
+			color: #a2a2a2;
+
+			+ h5 {
+				margin-top: 8px;
+			}
+		}
+
+		h5 {
+			font-size: 1.3rem;
+			color: $title-color;
+			
+			@include breakpoint(tablet) {
+				font-size: 1.5rem;
+			}
+			
+			@include breakpoint(wide) {
+				font-size: 1.7rem;
+			}
+		}
+
+		+ .content-detail {
+			margin-top: 3rem;
+		}
+
+		+ article {
+			margin-top: 1rem;
+		}
+	}
+
+	.article-area {
+		article {
+			font-size: 1rem;
+
+			h3,
+			h4,
+			h5 {
+				color: $title-color;
+				font-family: 'lato-bold';
+				margin-bottom: 1em;
+
+				+ ul,
+				+ ol,
+				+ p,
+				+ h3,
+				+ h4,
+				+ h5 {
+					margin-top: 1.5em;
+				}
+			}
+
+			p {
+				line-height: 150%;
+
+				+ ul,
+				+ ol,
+				+ h3,
+				+ h4,
+				+ h5 {
+					margin-top: 1.5em;
+				}
+			}
+
+			ol,
+			ul {
+				padding-left: 30px;
+
+				li {
+					font-size: 1.05em;
+					line-height: 150%;
+					
+					@include breakpoint(wide) {
+						font-size: 1.15em;
+					}
+
+					p {
+						font-size: 1em;
+					}
+
+					+ li {
+						margin-top: 10px;
+					}
+				}
+
+				+ ul,
+				+ ol,
+				+ p,
+				+ h3,
+				+ h4,
+				+ h5 {
+					margin-top: 1.5em;
+				}
+			}
+		}
+	}
+
+	.article-row {
+		.article-group {
+			padding: 1rem;
+		}
+
+		+ .article-row {
+			margin-top: 1rem;
+		}
+	}
+}

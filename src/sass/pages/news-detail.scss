@@ -1,0 +1,223 @@
+ .news-detail {
+	padding: 2rem 0 4rem;
+
+	.news-detail-inside {
+		.row {
+			[class*="col-"] {
+				+ [class*="col-"] {
+					margin-top: 2.5rem;
+					
+					@include breakpoint(tablet) {
+						margin-top: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.content-area {
+		@include breakpoint(tablet) {
+			padding-left: 30px;
+		}
+	}
+
+	.title-detail {
+		h6 {
+			font-size: 0.9rem;
+			text-transform: uppercase;
+			color: #a2a2a2;
+
+			+ h5 {
+				margin-top: 8px;
+			}
+		}
+
+		h5 {
+			font-size: 1.5rem;
+			color: $title-color;
+			
+			@include breakpoint(tablet) {
+				font-size: 1.8rem;
+			}
+			
+			@include breakpoint(wide) {
+				font-size: 2rem;
+			}
+		}
+
+		+ .content-detail {
+			margin-top: 3rem;
+		}
+	}
+
+	.content-detail {
+		+ .history-post {
+			margin-top: 3rem;
+		}
+	}
+
+	.image-area {
+		img {
+			width: 100%;
+		}
+		
+		+ .article-area {
+			margin-top: 3rem;
+		}
+	}
+
+	.article-area {
+		article {
+			font-size: 1rem;
+
+			h3,
+			h4,
+			h5 {
+				color: $title-color;
+				font-family: 'lato-bold';
+				margin-bottom: 1em;
+
+				+ ul,
+				+ ol,
+				+ p,
+				+ h3,
+				+ h4,
+				+ h5 {
+					margin-top: 1.5em;
+				}
+			}
+
+			p {
+				line-height: 150%;
+
+				+ ul,
+				+ ol,
+				+ h3,
+				+ h4,
+				+ h5 {
+					margin-top: 1.5em;
+				}
+			}
+
+			ol,
+			ul {
+				padding-left: 30px;
+
+				li {
+					font-size: 1.05em;
+					line-height: 150%;
+					
+					@include breakpoint(wide) {
+						font-size: 1.15em;
+					}
+
+					p {
+						font-size: 1em;
+					}
+
+					+ li {
+						margin-top: 10px;
+					}
+				}
+
+				+ ul,
+				+ ol,
+				+ p,
+				+ h3,
+				+ h4,
+				+ h5 {
+					margin-top: 1.5em;
+				}
+			}
+		}
+	}
+
+	.history-post {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		.post-list {
+			flex-basis: 0;
+			flex-grow: 1;
+			width: 100%;
+			flex: 0 0 100%;
+			
+			@include breakpoint(tablet) {
+				width: 48%;
+				flex: 0 0 48%;
+				gap: 16px;
+			}
+			
+			@include breakpoint(desktop) {
+				width: 49%;
+				flex: 0 0 49%;
+			}
+
+			&:hover {
+				.post-wrapper {
+					background-color: $blue;
+				}
+
+				h6 {
+					color: #c2d4ed;
+				}
+
+				h5 {
+					color: $white;
+				}
+			}
+			
+			+ .post-list {
+				margin-top: 1rem;
+
+				@include breakpoint(tablet) {
+					text-align: right;
+					margin-top: 0;
+				}
+			}
+		}
+
+		.post-wrapper {
+			position: relative;
+			background-color: #f3f4f6;
+			padding: 16px 20px;
+			overflow: hidden;
+			border-radius: 30px;
+			transition: all 0.3s linear;
+			
+			@include breakpoint(wide) {
+				padding: 1.4rem 2rem 1.6rem;
+			}
+		}
+
+		h6 {
+			font-size: 0.85rem;
+			text-transform: uppercase;
+			color: #a2a2a2;
+			transition: all 0.3s linear;
+
+			+ h5 {
+				margin-top: 4px;
+			}
+		}
+
+		h5 {
+			font-size: 1.1rem;
+			transition: all 0.3s linear;
+			
+			@include breakpoint(wide) {
+				font-size: 1.2rem;
+			}
+		}
+
+		.click-area {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+	}
+}
+

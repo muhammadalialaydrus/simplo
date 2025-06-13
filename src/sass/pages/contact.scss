@@ -1,0 +1,53 @@
+ .contact {
+	padding: 2rem 0 4rem;
+
+	.contact-inside {
+		.custom-form-row {
+			+ .custom-faq-row {
+				margin-top: 4rem;
+			}
+		}
+
+		.custom-faq-row {
+			.faq-col {
+				+ .faq-col {
+					margin-top: 3rem;
+					
+					@include breakpoint(tablet) {
+						margin-top: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.title-detail {
+		h6 {
+			font-size: 0.9rem;
+			text-transform: uppercase;
+			color: #a2a2a2;
+
+			+ h5 {
+				margin-top: 8px;
+			}
+		}
+
+		h5 {
+			font-size: 1.3rem;
+			color: $title-color;
+			
+			@include breakpoint(tablet) {
+				font-size: 1.5rem;
+			}
+			
+			@include breakpoint(wide) {
+				font-size: 1.7rem;
+			}
+		}
+
+		+ .custom-form,
+		+ .faq-content {
+			margin-top: 2rem;
+		}
+	}
+}

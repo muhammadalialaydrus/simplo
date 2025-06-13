@@ -1,0 +1,335 @@
+.swiper-container {
+	padding-bottom: 30px;
+
+	.swiper-pagination {
+		bottom: 0;
+
+		&.swiper-pagination-bullets-dynamic {
+			.swiper-pagination-bullet {
+
+				&.swiper-pagination-bullet-active {
+					background-color: $blue;
+				}
+			}
+		}
+	}
+}
+
+.navigation-wrapper {
+	position: absolute;
+	top: initial;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.swiper-custom-arrow {
+	width: 40px;
+	height: 40px;
+	background-color: $button-background;
+	border-radius: 100%;
+	line-height: 100%;
+	color: $button-color;
+	margin-top: 0;
+	position: relative;
+	top: initial;
+	right: initial;
+	left: initial;
+	transition: all 0.3s linear;
+	
+	@include breakpoint(tablet) {
+		width: 50px;
+		height: 50px;
+	}
+
+	&:after {
+		font-size: 1.3em;
+		
+		@include breakpoint(tablet) {
+			font-size: 1.5em;
+		}
+	}
+
+	&:hover {
+		@include breakpoint(desktop) {
+			background-color: $blue;
+			color: $white;
+		}
+	}
+}
+
+.swiper-scrollbar {
+	position: relative;
+	width: calc(100% - 92px);
+	height: 6px;
+	background-color: #cad0d9;
+	-ms-touch-action: none;
+	border-radius: 10px;
+
+	@include breakpoint(tablet) {
+		width: calc(100% - 120px);
+	}
+	
+	.swiper-scrollbar-drag {
+		height: 100%;
+		width: 100%;
+		position: relative;
+		background-color: $button-background;
+		border-radius: 10px;
+	}
+}
+
+.hero-banner {
+	.swiper-container {
+		padding: 0;
+	}
+
+	.swiper-custom-arrow {
+		position: absolute;
+		top: 50%;
+		bottom: initial;
+		left: initial;
+		right: initial;
+		margin-top: -20px;
+		background-color: rgba($white, 0.3);
+		color: $white;
+		box-shadow: 0 1px 3px 0 rgba(27, 27, 27, 0.1), 0 4px 8px 0 rgba(27, 27, 27, 0.1);
+		backdrop-filter: saturate(180%) blur(20px);
+		
+		@include breakpoint(tablet) {
+			margin-top: -25px;
+		}
+
+		&:hover {
+			@include breakpoint(desktop) {
+				background-color: $blue;
+				color: $white;
+			}
+		}
+
+		&.swiper-button-prev {
+			left: 10px;
+		}
+
+		&.swiper-button-next {
+			right: 10px;
+		}
+
+		&.swiper-button-disabled {
+			opacity: 0;
+		}
+
+		&:after {
+			text-shadow: 0 1px 4px rgba(27, 27, 27, 0.3);
+		}
+	}
+
+	.swiper-pagination {
+		bottom: 10px;
+		padding: 5px 10px;
+
+		&.swiper-pagination-bullets-dynamic {
+			.swiper-pagination-bullet {
+				opacity: 0.6;
+				// background-color: rgba($black, 0.2);
+				background-color: $white;
+				box-shadow: none;
+				box-shadow: 0 1px 4px rgba(27, 27, 27, 0.3);
+
+				&.swiper-pagination-bullet-active {
+					background-color: $white;
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+.product-slider {
+	.image-slider {
+		.swiper-container {
+			padding-bottom: 0;
+
+			@include breakpoint(wide) {
+				padding: 0 10%;
+			}
+		}
+	}
+}
+
+.brands-slider {
+	.slider-area {
+		.swiper-container {
+			padding-left: 20px;
+			padding-right: 20px;
+
+			@include breakpoint(tablet) {
+				padding-left: 3rem;
+				padding-right: 3rem;
+			}
+		}
+	}
+}
+
+.product-detail {
+	.image-primary {
+		.swiper-container {
+			padding: 0 30px;
+			// overflow: initial;
+			
+			@include breakpoint(tablet) {
+				padding: 0 50px;
+			}
+			
+			@include breakpoint(wide) {
+				padding: 0;
+			}
+		}
+
+		.swiper-slide-active {
+			.image-area {
+				figure {
+					&:before {
+						background-color: transparent;
+					}
+				}
+			}
+		}
+
+		.swiper-custom-arrow {
+			position: absolute;
+			top: 50%;
+			bottom: initial;
+			left: initial;
+			right: initial;
+			margin-top: -20px;
+			background-color: rgba($white, 0.3);
+			color: $white;
+			box-shadow: 0 1px 3px 0 rgba(27, 27, 27, 0.1), 0 4px 8px 0 rgba(27, 27, 27, 0.1);
+			backdrop-filter: saturate(180%) blur(20px);
+			
+			@include breakpoint(tablet) {
+				margin-top: -25px;
+			}
+
+			&:hover {
+				@include breakpoint(desktop) {
+					background-color: $blue;
+					color: $white;
+				}
+			}
+
+			&.swiper-button-prev {
+				left: 10px;
+			}
+
+			&.swiper-button-next {
+				right: 10px;
+			}
+
+			&.swiper-button-disabled {
+				opacity: 0;
+			}
+
+			&:after {
+				text-shadow: 0 1px 4px rgba(27, 27, 27, 0.3);
+			}
+		}
+
+		.swiper-pagination {
+			bottom: 10px;
+			padding: 5px 10px;
+
+			&.swiper-pagination-bullets-dynamic {
+				.swiper-pagination-bullet {
+					opacity: 0.6;
+					// background-color: rgba($black, 0.2);
+					background-color: $white;
+					box-shadow: none;
+					box-shadow: 0 1px 4px rgba(27, 27, 27, 0.3);
+
+					&.swiper-pagination-bullet-active {
+						background-color: $white;
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+
+	.image-thumb {
+		.swiper-container {
+			padding: 0;
+
+			@include breakpoint(tablet) {
+				height: 480px;
+			}
+
+			@include breakpoint(wide) {
+				height: 430px;
+			}
+
+			@include breakpoint(desktop) {
+				height: 513px;
+			}
+
+			.swiper-wrapper {
+				@include breakpoint(tablet) {
+					flex-direction: column;
+					// height: 100%!important;
+				}
+			}
+		}
+
+		.swiper-slide {
+			@include breakpoint(tablet) {
+				// height: auto!important;
+				// height: calc(100% / 6)!important;
+			}
+
+			.image-area {
+				figure {
+					&:before {
+						content: "";
+						position: absolute;
+						z-index: 1;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						pointer-events: none;
+						visibility: hidden;
+						opacity: 0;
+						border: 4px solid $semi-yellow;
+						border-radius: 15px;
+						transition: all 0.3s ease-in-out;
+
+						@include breakpoint(tablet) {
+							border-width: 6px;
+						}
+					}
+				}
+			}
+
+			&.swiper-slide-thumb-active {
+				.image-area {
+					figure {
+						&:before {
+							pointer-events: visible;
+							visibility: visible;
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
