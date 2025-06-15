@@ -157,6 +157,7 @@
 			&:hover {
 				.post-wrapper {
 					background-color: $blue;
+					background-color: $blue;
 				}
 
 				h6 {
@@ -183,6 +184,7 @@
 			background-color: #f3f4f6;
 			padding: 16px 20px;
 			overflow: hidden;
+			border: 1px solid #dedede;
 			border-radius: 30px;
 			transition: all 0.3s linear;
 			

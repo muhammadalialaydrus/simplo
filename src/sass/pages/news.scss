@@ -30,5 +30,17 @@
 				margin-top: 2rem;
 			}
 		}
+
+		.row {
+			[class*="col-"] {
+				+ [class*="col-"] {
+					margin-top: 0.5rem;
+					
+					@include breakpoint(tablet) {
+						margin-top: 0;
+					}
+				}
+			}
+		}
 	}
- }
+}
