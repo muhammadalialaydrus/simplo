@@ -261,9 +261,21 @@ b {
 			}
 
 			p {
-				text-align: left;
 				font-size: 1.1rem;
+				line-height: 130%;
+				text-align: left;
 				color: $title-color;
+				transition: all 0.3s linear;
+				
+				+ .desc-info {
+					margin-top: 8px;
+				}
+
+				&.desc-info {
+					font-size: 1rem;
+					font-family: 'lato-regular';
+					color: $body-color;
+				}
 			}
 		}
 
@@ -271,6 +283,10 @@ b {
 			.info-area {
 				p {
 					color: $blue;
+
+					&.desc-info {
+						color: $body-color;
+					}
 				}
 			}
 		}
