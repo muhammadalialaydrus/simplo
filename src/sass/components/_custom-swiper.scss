@@ -195,6 +195,9 @@
 				figure {
 					&:before {
 						background-color: transparent;
+						pointer-events: none;
+						visibility: hidden;
+						opacity: 0;
 					}
 				}
 			}
