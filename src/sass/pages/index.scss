@@ -24,8 +24,10 @@
 
 	.hero-desc {
 		position: absolute;
-		top: initial;
-		bottom: 40px;
+		// top: initial;
+		// bottom: 40px;
+		top: 70px;
+		bottom: initial;
 		left: 15px;
 		right: 15px;
 		
@@ -61,6 +63,14 @@
 				font-size: 2.4rem;
 			}
 
+			@media only screen and (max-device-width: 900px) and (orientation: landscape) {
+				font-size: 1.8rem;
+			}
+
+			@media only screen and (max-device-width: 757px) and (orientation: landscape) {
+				font-size: 1.7rem;
+			}
+
 			+ p {
 				margin-top: 16px;
 			}
@@ -73,6 +83,10 @@
 			
 			@include breakpoint(tablet) {
 				font-size: 1.3rem;
+			}
+
+			@media only screen and (max-device-width: 900px) and (orientation: landscape) {
+				font-size: 1.1rem;
 			}
 
 			+ .button-area {
