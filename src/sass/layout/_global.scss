@@ -138,9 +138,11 @@ b {
 		margin-bottom: 4rem;
 	}
 
+	h2,
 	h3 {
 		font-size: 1.8rem;
 		color: $title-color;
+		line-height: 120%;
 		
 		@include breakpoint(tablet) {
 			font-size: 2.1rem;
